@@ -1,0 +1,468 @@
+$circle-height-width: 250px;
+.activity{
+  &-desktop{
+    color: $swire-white;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    background-color: $banner-pink;
+    &-banner{
+      padding: 25px 0 75px;
+      max-width: 730px;
+      max-height: 503px;
+      display: inline-block;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      &-text {
+        top: 79%;
+        width: 100%;
+        h1 {
+          font-weight: lighter;
+          font-size: 40px;
+          padding-bottom: 10px;
+        }
+        h4 {
+          line-height: 25px;
+          font-weight: lighter;
+          padding-bottom: 8px;
+          font-size: 16px;
+        }
+      }
+    }
+    &-qr{
+      &-container{
+        display: table;
+
+        margin: 5px auto;
+
+        img{
+          display: table-cell;
+
+          width: 140px;
+
+          vertical-align: middle;
+
+          border: 10px solid $swire-white;
+        }
+      }
+      &-content{
+        font-size: 25px;
+
+        display: table-cell;
+
+        padding-left: 20px;
+
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
+  }
+  &-mobile{
+    width: 100vw;
+    // min-height: 100vh;
+    &-banner{
+      min-height: 100vh;
+      position: relative;
+
+      padding-bottom: 30px;
+
+      background-color: $banner-pink;
+      .img-btn-container {
+        position: relative;
+      }
+      &-main-img{
+        width: 100%;
+      }
+      &-btn{
+        position: absolute;
+        top: 85%;
+
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  &-game{
+    &.questions{
+      display: none;
+    }
+    &.questions.active{
+      display: block;
+    }
+    &-header{
+      margin: 20px 0 5px;
+      h5 {
+        margin: 0;
+      }
+      &-line{
+        width: 150px;
+      }
+    }
+    &-circle{
+      position: relative;
+      // width: 100%;
+
+      height: $circle-height-width + 100px;
+      margin: 0;
+      padding: 0;
+      &-container{
+        position: relative;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
+        top: 40%;
+
+        overflow: hidden;
+
+        width: $circle-height-width;
+        height: $circle-height-width;
+
+        -moz-border-radius: 70%;
+        border-radius: 70%;
+        background-color: pink;
+      }
+      &-innerwrapper{
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        width: $circle-height-width * 2;
+        height: $circle-height-width;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+
+        background-color: $swire-black;
+        img{
+          width: 100%;
+          min-height: 100%;
+        }
+        &-left{
+          float: left;
+
+          width: $circle-height-width;
+          height: 100%;
+        }
+        &-right{
+          float: left;
+
+          width: $circle-height-width;
+          height: 100%;
+        }
+      }
+      &-range{
+        top: 91%;
+
+        width: 160px;
+        .diamond{
+          z-index: -1;
+
+          width: 15px;
+          &-left{
+            left: 0;
+          }
+          &-right{
+            left: 100%;
+          }
+        }
+        .description{
+          width: 40px;
+          font-size: 18px;
+          font-weight: normal;
+          &-left{
+            left: -25%;
+          }
+          &-right{
+            left: 125%;
+          }
+        }
+      }
+    }
+    &-btn-container {
+      margin: 20px 0 40px;
+    }
+    .indicator {
+      position: absolute;
+      left: 0;
+      width: 95px;
+      top: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    &-ans{
+      display: none;
+      &.active {
+        display: block;
+      }
+      &-header {
+        margin-top: 20px;
+        h3 {
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+      &-description{
+        font-size: 14px;
+        font-weight: normal;
+        margin: 10px 0 20px;
+        line-height: 25px;
+      }
+      &-sub-head {
+        margin: 20px 0;
+      }
+      .product-img{
+        width: 100%;
+      }
+      .activity-black-box-btn{
+        width: 100%;
+      }
+      &-caption{
+        font-weight: normal;
+        font-size: 12px;
+        margin: 20px 0;
+        width: 75%;
+      }
+    }
+    &-thanks {
+      display: none;
+      &.active {
+        display: block;
+      }
+      &-header {
+        margin-top: 50px;
+        width: 65%;
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 500;
+        color: $banner-pink;
+      }
+      &-content{
+        width: 65%;
+        display: inline-block;
+        line-height: 25px;
+        font-size: 16px;
+      }
+      &-qr {
+        width: 60%;
+      }
+      &-pink-bar {
+        font-weight: lighter;
+        line-height: 100px;
+        margin: 50px 0 0 0 ;
+        color: $swire-white;
+        background-color: $banner-pink;
+      }
+    }
+  }
+  &-black-box-btn{
+    line-height: 50px;
+
+    display: inline-block;
+
+    width: 85%;
+    height: 100%;
+
+    color: $swire-white;
+    background-color: $swire-black;
+    &-container{
+      position: relative;
+
+      height: 50px;
+    }
+    span{
+      display: inline-block;
+
+      width: 7px;
+      margin-left: 5px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &-desktop-banner-margin{
+    margin-bottom: -60px;
+  }
+  &-qr-code-center-everything{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &-font-smaller{
+    font-size: 10px;
+  }
+  &-font-smaller h4{
+    font-size: 10px;
+    line-height: 20px;
+    min-width: 420px;
+  }
+  &-qr-code-width-height div img{
+    width:80px;
+  }
+  &-qr-code-width-height{
+    height:146px;
+  }
+  &-qr-border{
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+  }
+  &-qr-code-text-border-background{
+    border-color: white;
+    border-width: 13.6px;
+    border-left-width: 40px;
+    border-style: solid;
+    background: white;
+    color: black;
+    left: -30px;
+  }
+}
+@media only screen and (max-width: 992px){
+  .activity-desktop-ver{
+    display: none;
+  }
+}
+@media only screen and (max-width: 766px){
+  .activity-tablet-ver{
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px){
+  .activity-tablet-ver{
+    display: none;
+  }
+}
+
+//RANGE CSS CONFIG
+input[type=range]{
+  width: 100%; /* Specific width is required for Firefox. */
+
+  background: transparent; /* Otherwise white in Chrome */
+
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus{
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track{
+  width: 100%;
+
+  cursor: pointer;
+
+  color: transparent;
+  border-color: transparent;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+}
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb{
+  width: 35px;
+  // border: 1px solid $swire-black;
+  height: 35px;
+  margin-top: -13px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+  cursor: pointer;
+
+  border: 11px $range-thumb-gray solid;
+  border-radius: 70%;
+  background: $swire-black;
+
+  -webkit-appearance: none;
+  // box-shadow: 5px 5px 5px $swire-black, 0px 0px 1px $range-thumb-gray; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb{
+  width: 25px;
+  // box-shadow: 1px 1px 1px $swire-black, 0px 0px 1px $swire-black;
+  // border: 1px solid $swire-black;
+  height: 25px;
+
+  cursor: pointer;
+
+  border: 11px $range-thumb-gray solid;
+  border-radius: 70%;
+  background: $swire-black;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb{
+  width: 25px;
+  // box-shadow: 1px 1px 1px $swire-black, 0px 0px 1px $swire-black;
+  // border: 1px solid $swire-black;
+  height: 25px;
+
+  cursor: pointer;
+
+  border-radius: 70%;
+  background: $range-thumb-gray;
+}
+input[type=range]::-webkit-slider-runnable-track{
+  width: 100%;
+  height: 5px;
+
+  cursor: pointer;
+
+  background: $swire-black;
+  // box-shadow: 1px 1px 1px $swire-black, 0px 0px 1px $swire-black;
+  // border-radius: 1.3px;
+  // border: 0.2px solid $swire-black;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track{
+  background: $swire-black;
+}
+
+input[type=range]::-moz-range-track{
+  width: 100%;
+  height: 5px;
+
+  cursor: pointer;
+
+  background: $swire-black;
+  // box-shadow: 1px 1px 1px $swire-black, 0px 0px 1px $swire-black;
+  // border-radius: 1.3px;
+  // border: 0.2px solid $swire-black;
+}
+
+input[type=range]::-ms-track{
+  width: 100%;
+  height: 8.4px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border-width: 16px 0;
+  border-color: transparent;
+  background: transparent;
+}
+input[type=range]::-ms-fill-lower{
+  border: .2px solid $swire-black;
+  border-radius: 2.6px;
+  background: $swire-black;
+  box-shadow: 1px 1px 1px $swire-black, 0 0 1px $swire-black;
+}
+input[type=range]:focus::-ms-fill-lower{
+  background: $swire-black;
+}
+input[type=range]::-ms-fill-upper{
+  border: .2px solid $swire-black;
+  border-radius: 2.6px;
+  background: $swire-black;
+  box-shadow: 1px 1px 1px $swire-black, 0 0 1px $swire-black;
+}
+input[type=range]:focus::-ms-fill-upper{
+  background: $swire-black;
+}
+input[type=range]::-ms-tooltip{
+  display: none;
+}

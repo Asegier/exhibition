@@ -1,0 +1,327 @@
+.event-details{
+    &-header{
+        margin-bottom: 15px;
+    }
+    &.details-container{
+        margin-top: 40px;
+        padding: 0 10px 0 10px;
+
+        background-color: $eventDetails-color;
+    }
+    &-city.vertical{
+        margin-top: 50px;
+        .event-details-city-logo{
+            text-align: center;
+            img{
+                width: auto;
+                max-width: 126px;
+                max-height: 188px;
+            }
+        }
+    }
+    &-city{
+        // transform: translate(0%, 5.6%) scale(0.8, 0.8);
+        margin-top: 113px;
+
+        word-spacing: 5px;
+        &-container{
+            display: inline-block;
+        }
+        &-inner{
+            position: relative;
+
+            padding-left: 30px;
+
+            text-align: left;
+        }
+        &-logo{
+            text-align: center;
+            img{
+                width: auto;
+                max-width: 205px;
+                max-height: 125px;
+            }
+        }
+        &-icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            img{
+                width: auto;
+            }
+        }
+        a &-specifics{
+            display: inline-block;
+
+            border-bottom: 1px solid $swire-black;
+        }
+        &-social{
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &-action{
+            a{
+                font-size: 18px;
+                font-weight: normal;
+                // width: 100%;
+
+                display: inline-block;
+
+                width: 260px;
+                margin-bottom: 5px;
+                padding: 10px 0;
+
+                color: #fff;
+                background-color: $swire-black;
+                span{
+                    height: 20px;
+                }
+                img{
+                    height: 25px;
+                    padding-right: 10px;
+                }
+            }
+        }
+        .pb-10{
+            padding-bottom: 10px;
+        }
+        .pb-30{
+            padding-bottom: 30px;
+        }
+    }
+    &-calendar{
+        padding: 0;
+        &-title{
+            padding: 0;
+            h2{
+                margin: 40px 0;
+            }
+        }
+        &-item{
+            padding: 13px;
+
+            border-bottom: 5px solid $eventDetails-color;
+            background-color: #fff;
+        }
+        &-item.responsive{
+            .event-details-calendar-time{
+                padding-left: 0;
+            }
+            .event-details-calendar-date{
+                width: 42px;
+                height: 54px;
+            }
+            .event-details-calendar-month{
+                font-size: 9px;
+            }
+            .event-details-calendar-day{
+                font-size: 25px;
+                line-height: 28px;
+            }
+            .event-details-calendar-date.second{
+                margin-left: 20px;
+            }
+            .event-details-calendar-date.second::after{
+                left: -24%;
+
+                width: 8px;
+                height: 3px;
+            }
+        }
+/*        &-time{
+            padding-right: 0;
+            &::after{
+                position: absolute;
+                top: 12%;
+                right: 0;
+
+                height: 75%;
+
+                content: '';
+
+                border-right: 1px dotted $swire-black;
+            }
+        }*/
+        &-date{
+            width: 50px;
+            height: 60px;
+            padding: 7px;
+
+            color: $banner-pink;
+            background-color: $eventDetails-color;
+        }
+        &-date.second{
+            margin-left: 60px;
+        }
+        &-date.second::after{
+            position: absolute;
+            top: 50%;
+            left: -60%;
+
+            width: 22px;
+            height: 3px;
+
+            content: '';
+            transform: translate(-50%, -50%);
+
+            background-color: $date-divider-gray;
+        }
+        &-month{
+            font-size: 12px;
+        }
+        &-day{
+            font-size: 32px;
+            line-height: 32px;
+        }
+        &-details{
+            padding-top: 1.5%;
+            padding-right: 0;
+
+            &::before{
+                position: absolute;
+                top: 0%;
+                left: 0;
+
+                height: 100%;
+
+                content: '';
+
+                border-right: 1px dotted $swire-black;
+            }
+        }
+        &-type{
+            font-size: 12px;
+            line-height: 10px;
+
+            width: 80px;
+            height: 20px;
+            padding: 5px;
+
+            text-align: center;
+
+            color: #fff;
+        }
+        &-type.red{
+            background-color: $eventDetails-type-bg-red;
+        }
+        &-type.blue{
+            background-color: $eventDetails-type-bg-blue;
+        }
+        &-type.purple{
+            background-color: $eventDetails-type-bg-purple;
+        }
+        &-desc{
+            padding-top: 6px;
+        }
+        &-placeholder{
+            position: relative;
+
+            width: 100%;
+            height: 400px;
+
+            background-color: $eventDetails-placeholder-gray;
+            h3{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                margin: 0;
+        -webkit-transform: translate(-50%,-50%);
+           -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+             -o-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+
+                color: #fff;
+                img{
+                    display: block;
+
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+    .qr{
+        &-hover{
+            display: inline-block;
+        }
+        &-hover:hover{
+            .qr-container{
+                display: inline-block;
+            }
+        }
+        &-container{
+            top: -330%;
+
+            display: none;
+            img{
+                width: 120px;
+            }
+        }
+        &-code{
+            top: 45%;
+
+            width: 100px;
+            height: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .event-details{
+        &.details-container{
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+        &-calendar{
+            &-title{
+                text-align: center;
+            }
+        }
+        &-city.vertical{
+            margin-top: 35px;
+            .event-details-city-logo{
+                img{
+                    width: auto;
+                    max-height: 120px;
+                }
+            }
+        }
+        &-city{
+            margin-top: 35px;
+            padding: 0;
+
+            transform: none;
+            &-container{
+                // width: 100%;
+            }
+            .col-xs-12{
+                padding-right: 0;
+                padding-left: 0;
+            }
+            &-inner.mobile{
+                padding-left: 0;
+
+                text-align: center;
+            }
+            &-logo{
+                text-align: center;
+                img{
+                    width: auto;
+                    max-height: 80px;
+                }
+            }
+        }
+        .qr{
+            &-hover:hover{
+                .qr-container{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.banner{
+    position: relative;
+
+    padding: 0;
+
+    color: $swire-white;
+    background-color: $swire-black;
+    &-pink{
+        background-color: $banner-pink;
+    }
+    &-white{
+        background-color: $banner-white;
+    }
+    #myCarousel{
+        padding: 0 0;
+        .carousel-control{
+            span{
+                position: absolute;
+                top: 40%;
+            }
+            &.left{
+                background-image: none;
+                span{
+                    left: 7%;
+                }
+            }
+            &.right{
+                background-image: none;
+                span{
+                    right: 7%;
+                    left: auto;
+                }
+            }
+        }
+    }
+    &-txt{
+        height: 100%;
+        img{
+            // width: 85%;
+            width: auto;
+            padding: 0 5px 00;
+        }
+    }
+    &-img{
+        img{
+            width: 100%;
+            // width: auto;
+        }
+    }
+    // &-mobile{
+    //     img{
+    //         width: 100%;
+    //     }
+    // }
+    &-action{
+        position: absolute;
+        bottom: -65px;
+        left: 50%;
+
+        width: 75%;
+        top: auto;
+        // transform: translate(-50%,50%);
+        text-align: center;
+        img{
+            width: 30%;
+        }
+    }
+}
+.main-menu{
+    padding-bottom: 40px;
+}
+@media screen and (max-width: 768px){
+    .banner{
+        &-txt{
+            img{
+                width: 75%;
+            }
+        }
+        &-action{
+            img{
+                width: 40%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .banner{
+        padding: 0 0;
+        &-action{
+            img{
+                width: 100%;
+            }
+        }
+        .carousel-control:hover,
+        .carousel-control:focus{
+            opacity: .5;
+        }
+    } 
+    .main-menu{
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,60 @@
+.photos{
+    &-header{
+        h3{
+            margin-bottom: 15px;
+        }
+    }
+    .tabs{
+        position: relative;
+    }
+    .coming-soon{
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+
+        display: inline-block;
+
+        width: 100%;
+        height: 100%;
+
+        background: -webkit-radial-gradient($swire-black, #272626, #242524);
+        background:      -o-radial-gradient($swire-black, #272626, #242524); /* For Opera 11.6 to 12.0 */
+        background:    -moz-radial-gradient($swire-black, #272626, #242524); /* For Firefox 3.6 to 15 */
+        background:         radial-gradient($swire-black, #272626, #242524); /* Standard syntax */
+        background-color: $swire-black;
+        background-color: black;
+        img{
+            width: 50%;
+        }
+    }
+}
+.photos{
+    .timeline{
+        &-tab:not(.active){
+            .timeline-content{
+                color: $eventDetails-placeholder-gray;
+                &-dot{
+                    background-color: $eventDetails-placeholder-gray;
+                }
+                &-dot:hover{
+                    background-color: $eventDetails-placeholder-gray;
+                }
+                &-details:hover ~ &-dot,
+                &-city:hover ~ &-dot,{
+                    background-color: $eventDetails-placeholder-gray;
+                }
+            }
+        }
+        &-nav-btns{
+            opacity: 0.2;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .photos .coming-soon{
+        img{
+            width: 80%;
+        }
+    }
+}
